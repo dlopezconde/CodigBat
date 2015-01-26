@@ -16,25 +16,25 @@ public class VentanaCodingBat extends javax.swing.JFrame {
     public VentanaCodingBat() {
         initComponents();
     }
-       public boolean unlucky1(int[] nums) {
-       if(nums.length < 3) {
-   if(nums.length == 2 && nums[0] == 1 && nums[1] == 3){
-       return true;
-   }else{
-       return false;
-   }
-   }
-  if(nums[0] == 1 && nums[1] == 1 && nums[2] == 1 && nums.length == 3){
-      return false;
-  }
-  if(nums[0] == 1 && nums[1] == 3 || nums[1] == 1 && nums[2] == 3 || nums[nums.length - 1] == 3 && nums[nums.length - 2] == 1)
-  {return true;
-  }else{
-      return false;
-  }
-       }
-   
-    
+
+    public boolean unlucky1(int[] nums) {
+        if (nums.length < 3) {
+            if (nums.length == 2 && nums[0] == 1 && nums[1] == 3) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        if (nums[0] == 1 && nums[1] == 1 && nums[2] == 1 && nums.length == 3) {
+            return false;
+        }
+        if (nums[0] == 1 && nums[1] == 3 || nums[1] == 1 && nums[2] == 3 || nums[nums.length - 1] == 3 && nums[nums.length - 2] == 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -63,11 +63,11 @@ public class VentanaCodingBat extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(151, 151, 151)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(164, 164, 164)
+                        .addComponent(jButton1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(140, 140, 140)
-                        .addComponent(jButton1)))
+                        .addGap(112, 112, 112)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(114, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -75,17 +75,19 @@ public class VentanaCodingBat extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(16, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(74, 74, 74)
                 .addComponent(jButton1)
-                .addGap(180, 180, 180))
+                .addGap(124, 124, 124))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MousePressed
-    int array[] = {1,3,4,5};
-        unlucky1(array);
+        
+        int array[] = {1, 3, 4, 5};
+        boolean resultado =  unlucky1(array);
+       jLabel1.setText("resultado = "+resultado);
     }//GEN-LAST:event_jButton1MousePressed
 
     /**
